@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+// Perform XOR operation to find the result
+unsigned int computeXOR(unsigned int x, unsigned int y, unsigned int z) {
+    unsigned int result = x ^ y ^ z;
+    return result; // Return the XOR result
+}
+
+int main() {
+    unsigned int inputs[3] = {0}; // Array to store inputs
+
+    // Collect all inputs from the user in a single step
+    printf("Input three hexadecimal numbers separated by spaces (e.g., 0x1A 0x2B 0x3C): ");
+    scanf("%x %x %x", &inputs[0], &inputs[1], &inputs[2]);
+
+    // Process the inputs using the computeXOR function
+    unsigned int result = computeXOR(inputs[0], inputs[1], inputs[2]);
+
+    // Output the calculated result
+    printf("Computed result (Original message): 0x%X\n", result);
+
+    return 0; // End the program
+}
